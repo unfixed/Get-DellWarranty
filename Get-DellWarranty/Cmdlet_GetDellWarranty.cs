@@ -8,7 +8,7 @@ using System.Text;
 namespace Get_DellWarranty
 {
     [System.Management.Automation.Cmdlet("Get", "DellWarranty")]
-    public class Get_DellWarranty : System.Management.Automation.PSCmdlet
+    public class Cmdlet_GetDellWarranty : System.Management.Automation.PSCmdlet
     {
         [System.Management.Automation.Parameter(Position=0,Mandatory=true,ValueFromPipeline=true)]
         public string ServiceTag;
