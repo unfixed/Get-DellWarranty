@@ -28,10 +28,11 @@ namespace Get_DellWarranty
             {
                 throw new ArgumentNullException();
             }
-            Get_DellWarranty.DellAssetService.AssetServiceSoapClient engine = new Get_DellWarranty.DellAssetService.AssetServiceSoapClient();
-            Get_DellWarranty.DellAssetService.Asset[] result = engine.GetAssetInformation(this.engineGuid, this.appName, machineSerial);
+            Get_DellWarranty.DellServiceReference.AssetService engine = new Get_DellWarranty.DellServiceReference.AssetService();
+            Get_DellWarranty.DellServiceReference.Asset[] result = engine.GetAssetInformation(this.engineGuid, this.appName, machineSerial);
 
-            DellAssetService.EntitlementData[] Entitlements = result[0].Entitlements;
+
+            DellServiceReference.EntitlementData[] Entitlements = result[0].Entitlements;
             DateTime WarrantyEndDate = Entitlements[0].EndDate;
             machine = new Computer("unknown", machineSerial, result[0].AssetHeaderData.SystemModel, result[0].AssetHeaderData.SystemShipDate, WarrantyEndDate);
         }

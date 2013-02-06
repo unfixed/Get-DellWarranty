@@ -7,6 +7,6 @@ C:\Users\agondal\Source\Repos\Get-DellWarranty\Get-DellWarranty\bin\Debug\Get-De
 C:\Users\agondal\Documents\GitHub\Get-DellWarranty\Get-DellWarranty\bin\Debug\Get-DellWarranty.dll.config
 C:\Users\agondal\Documents\GitHub\Get-DellWarranty\Get-DellWarranty\bin\Debug\Get-DellWarranty.dll
 C:\Users\agondal\Documents\GitHub\Get-DellWarranty\Get-DellWarranty\bin\Debug\Get-DellWarranty.pdb
-C:\Users\agondal\Documents\GitHub\Get-DellWarranty\Get-DellWarranty\obj\Debug\Get-DellWarranty.csprojResolveAssemblyReference.cache
 C:\Users\agondal\Documents\GitHub\Get-DellWarranty\Get-DellWarranty\obj\Debug\Get-DellWarranty.dll
 C:\Users\agondal\Documents\GitHub\Get-DellWarranty\Get-DellWarranty\obj\Debug\Get-DellWarranty.pdb
+C:\Users\agondal\Documents\GitHub\Get-DellWarranty\Get-DellWarranty\obj\Debug\Get-DellWarranty.csprojResolveAssemblyReference.cache

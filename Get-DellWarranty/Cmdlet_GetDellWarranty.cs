@@ -7,6 +7,9 @@ using System.Text;
 
 namespace Get_DellWarranty
 {
+
+
+
     [System.Management.Automation.Cmdlet("Get", "DellWarranty")]
     public class Cmdlet_GetDellWarranty : System.Management.Automation.PSCmdlet
     {
@@ -15,7 +18,10 @@ namespace Get_DellWarranty
 
         protected override void ProcessRecord()
         {
-            this.WriteObject(this.ServiceTag);
+            warrantyLookupEngine lookupEngine = new warrantyLookupEngine();
+            Computer machine = new Computer();
+            lookupEngine.engineLookup(ref machine, ref this.ServiceTag);
+            this.WriteObject(machine.Model());
         }
     }
 }
