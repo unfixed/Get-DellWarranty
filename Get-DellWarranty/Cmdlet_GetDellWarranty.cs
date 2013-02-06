@@ -19,9 +19,9 @@ namespace Get_DellWarranty
         protected override void ProcessRecord()
         {
             warrantyLookupEngine lookupEngine = new warrantyLookupEngine();
-            Computer machine = new Computer();
+            AssetData machine = new AssetData();
             lookupEngine.engineLookup(ref machine, ref this.ServiceTag);
-            this.WriteObject(machine.Model());
+            this.WriteObject(machine,true);
         }
     }
 }

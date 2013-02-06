@@ -22,7 +22,7 @@ namespace Get_DellWarranty
         {
             this.serviceURI = URI;
         }
-        public void engineLookup(ref Computer machine, ref string machineSerial)
+        public void engineLookup(ref AssetData machine, ref string machineSerial)
         {
             if (machineSerial.Length != 7)
             {
@@ -34,7 +34,17 @@ namespace Get_DellWarranty
 
             DellServiceReference.EntitlementData[] Entitlements = result[0].Entitlements;
             DateTime WarrantyEndDate = Entitlements[0].EndDate;
-            machine = new Computer("unknown", machineSerial, result[0].AssetHeaderData.SystemModel, result[0].AssetHeaderData.SystemShipDate, WarrantyEndDate);
+
+            machine = new AssetData(
+                "unknown",
+                result[0].AssetHeaderData.ServiceTag,
+                result[0].AssetHeaderData.SystemID,
+                result[0].AssetHeaderData.Buid,
+                result[0].AssetHeaderData.Region,
+                result[0].AssetHeaderData.SystemType,
+                result[0].AssetHeaderData.SystemModel,
+                result[0].AssetHeaderData.SystemShipDate,
+                WarrantyEndDate);
         }
 
     }
